@@ -86,7 +86,7 @@ resource "kubernetes_namespace" "keda" {
 
 
 resource "helm_release" "keda" {
-  depends_on = [var. , kubernetes_namespace.keda]
+  depends_on = [kubernetes_namespace.keda]
   count      = var.enabled ? 1 : 0
   name       = var.helm_chart_name
   chart      = var.helm_chart_release_name
