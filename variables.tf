@@ -22,3 +22,9 @@ variable "tags" {
   default = {
   }
 }
+
+variable "keda" {
+  type        = string
+  description = "Keda configuration"
+  default     = "2.10.2"
+}
